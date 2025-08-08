@@ -10,6 +10,12 @@ dist/
 .env
 .env.local
 .env.production
+env-vars.json
+*/env-vars.json
+
+# API keys and sensitive data
+*.key
+*.pem
 
 # IDE files
 .vscode/

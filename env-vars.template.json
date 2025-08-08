@@ -1,0 +1,6 @@
+{
+  "Variables": {
+    "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY_HERE",
+    "ASSISTANT_ID": "YOUR_ASSISTANT_ID_HERE"
+  }
+}
