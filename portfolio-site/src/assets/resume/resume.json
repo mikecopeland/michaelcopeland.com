@@ -1,0 +1,137 @@
+{
+  "basics": {
+    "name": "Michael Copeland, CSM",
+    "email": "michael@michaelcopeland.com",
+    "phone": "703.209.6693",
+    "location": "Fairfax, VA 22033",
+    "summary": "With my extensive background in software development, spanning the last 21 years, I have developed applications, full-stack, using languages from C# to Java and JavaScript (Node.JS). I bring an eagerness to learn new technologies and to apply new patterns to solve problems, always striving to stay atop the trends of the ever-changing world of software development.",
+    "website": "https://michaelcopeland.com",
+    "linkedin": "https://www.linkedin.com/in/michaelccopeland",
+    "github": "https://github.com/mikecopeland"
+  },
+  "work": [
+    {
+      "company": "GDIT Inc.",
+      "position": "Software Development Advisor",
+      "startDate": "2003-01",
+      "endDate": null,
+      "description": "Lead developer across multiple Spring MVC Applications with 21 years of experience in full-stack development. Responsible for modernizing applications and implementing new technologies.",
+      "technologies": ["Spring MVC", "Spring Boot", "Java", "JavaScript", "Node.js", "AWS", "Flutter", "Python", "Docker"],
+      "achievements": [
+        "Led migration of URM data system for tracking unaccompanied minors' access to refugee benefits",
+        "Modernized UI across screens to speed page load and standardize look and feel",
+        "Developed service locator mobile application using Flutter for iOS and Android",
+        "Built survey system for communication with refugees using AWS Lambda and DynamoDB",
+        "Implemented JIRA workflows and scrum practices for development teams",
+        "Served as Scrum Master across multiple Agile development teams"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Maryland, College Park",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "startDate": "1999-09",
+      "endDate": "2003-05",
+      "gpa": null,
+      "description": "Graduated with Computer Science degree, focusing on software development and full-stack applications."
+    }
+  ],
+  "skills": [
+    { "name": "Java", "level": "Expert", "category": "Backend" },
+    { "name": "Spring MVC", "level": "Expert", "category": "Backend" },
+    { "name": "Spring Boot", "level": "Expert", "category": "Backend" },
+    { "name": "JavaScript", "level": "Expert", "category": "Frontend" },
+    { "name": "Node.js", "level": "Advanced", "category": "Backend" },
+    { "name": "Python", "level": "Advanced", "category": "Backend" },
+    { "name": "C#", "level": "Advanced", "category": "Backend" },
+    { "name": "Groovy", "level": "Advanced", "category": "Backend" },
+    { "name": "AWS", "level": "Advanced", "category": "Cloud" },
+    { "name": "Docker", "level": "Advanced", "category": "DevOps" },
+    { "name": "Flutter", "level": "Intermediate", "category": "Mobile" },
+    { "name": "jQuery", "level": "Expert", "category": "Frontend" },
+    { "name": "HTML", "level": "Expert", "category": "Frontend" },
+    { "name": "CSS", "level": "Expert", "category": "Frontend" },
+    { "name": "Git", "level": "Expert", "category": "Tools" },
+    { "name": "Jenkins", "level": "Advanced", "category": "DevOps" },
+    { "name": "JIRA", "level": "Advanced", "category": "Tools" },
+    { "name": "MySQL", "level": "Advanced", "category": "Database" },
+    { "name": "SQL Server", "level": "Advanced", "category": "Database" },
+    { "name": "REST/SOAP", "level": "Expert", "category": "Backend" }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Scrum Master (CSM)",
+      "issuer": "Scrum Alliance",
+      "date": "2017-03",
+      "credentialId": "CSM-2017"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Refugee Arrivals Data System",
+      "description": "Migration of URM data system for tracking unaccompanied minors' access to refugee benefits to a separate Spring MVC application",
+      "url": null,
+      "technologies": ["Spring MVC", "Java", "AWS", "DynamoDB"],
+      "startDate": "2020-01",
+      "endDate": "2024-01"
+    },
+    {
+      "name": "Service Locator Mobile App",
+      "description": "Flutter application to allow location of refugee services via devices using iOS and Android",
+      "url": null,
+      "technologies": ["Flutter", "Dart", "Mobile Development"],
+      "startDate": "2022-01",
+      "endDate": "2023-12"
+    },
+    {
+      "name": "Survey System for Refugees",
+      "description": "Web application using Webpack and NodeJS to provide a fast-loading mobile responsive site for refugee communication",
+      "url": null,
+      "technologies": ["Node.js", "Webpack", "AWS S3", "Amazon Pinpoint"],
+      "startDate": "2021-06",
+      "endDate": "2023-06"
+    },
+    {
+      "name": "VA File Conversion Services",
+      "description": "Multiple Grails and AWS applications for maintaining shipping logistics and file scanning for the Department of Veteran Affairs",
+      "url": null,
+      "technologies": ["Grails", "AWS Lambda", "DynamoDB", "jQuery"],
+      "startDate": "2018-01",
+      "endDate": "2020-12"
+    },
+    {
+      "name": "Mailbox Zero",
+      "description": "Automated processing routines using UI Path and Tesseract OCR engine to process PDFs from email inboxes",
+      "url": null,
+      "technologies": ["UI Path", "Python", "Tesseract OCR", "AWS SNS"],
+      "startDate": "2019-01",
+      "endDate": "2021-12"
+    },
+    {
+      "name": "Vets.gov API",
+      "description": "Migration of Sprint applications to Spring Boot based microservices in AWS hosted architecture",
+      "url": null,
+      "technologies": ["Spring Boot", "AWS", "Docker", "Lambda", "API Gateway"],
+      "startDate": "2017-01",
+      "endDate": "2019-12"
+    },
+    {
+      "name": "eBenefits.va.gov",
+      "description": "Lead Front-End Developer and System Architect for EVSS project, incorporating responsive design and custom UI components",
+      "url": "https://www.ebenefits.va.gov",
+      "technologies": ["JavaScript", "jQuery", "Sass", "Grunt", "QUnit"],
+      "startDate": "2015-01",
+      "endDate": "2017-12"
+    },
+    {
+      "name": "Grants.gov",
+      "description": "Grails application to support grants management across multiple clients with business workflow system",
+      "url": "https://www.grants.gov",
+      "technologies": ["Grails", "Java", "XML", "Apache POI", "iText"],
+      "startDate": "2010-01",
+      "endDate": "2015-12"
+    }
+  ]
+}

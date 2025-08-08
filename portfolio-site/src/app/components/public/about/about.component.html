@@ -1,0 +1,132 @@
+<div class="bg-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Debug Info -->
+    <div class="mt-4 p-4 bg-yellow-100 rounded-lg" *ngIf="profile$ | async as profile">
+      <p class="text-sm text-yellow-800">Debug: Profile loaded - {{ profile.name }}</p>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="mt-12" *ngIf="profile$ | async as profile; else profileLoading">
+      <div class="bg-gray-50 rounded-lg p-6 mb-8">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <div class="h-16 w-16 bg-primary-500 rounded-full flex items-center justify-center">
+              <span class="text-white text-xl font-bold">{{ profile.name.charAt(0) }}</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900">{{ profile.name }}</h3>
+            <p class="text-gray-500">{{ profile.location }}</p>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700">{{ profile.summary }}</p>
+        
+        <!-- Download Resume Button -->
+        <div class="mt-6 flex justify-center">
+          <a 
+            href="/assets/resume/Michael Copeland.pdf" 
+            download="Michael_Copeland_Resume.pdf"
+            class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg shadow-lg hover:from-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300"
+          >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+
+      <!-- Experience Section -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Experience</h3>
+        <div class="space-y-6" *ngIf="experience$ | async as experience">
+          <div class="border-l-4 border-primary-500 pl-4" *ngFor="let exp of experience">
+            <h4 class="text-lg font-semibold text-gray-900">{{ exp.position }}</h4>
+            <p class="text-gray-600">{{ exp.company }}</p>
+            <p class="text-sm text-gray-500">{{ formatDateRange(exp.startDate, exp.endDate) }}</p>
+            <p class="mt-2 text-gray-700">{{ exp.description }}</p>
+            <div class="mt-2 flex flex-wrap gap-2" *ngIf="exp.technologies?.length">
+              <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full" 
+                    *ngFor="let tech of exp.technologies">{{ tech }}</span>
+            </div>
+            <div class="mt-2" *ngIf="exp.achievements?.length">
+              <h5 class="text-sm font-medium text-gray-700 mb-1">Key Achievements:</h5>
+              <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                <li *ngFor="let achievement of exp.achievements">{{ achievement }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Education</h3>
+        <div class="space-y-4" *ngIf="education$ | async as education">
+          <div class="border-l-4 border-green-500 pl-4" *ngFor="let edu of education">
+            <h4 class="text-lg font-semibold text-gray-900">{{ edu.degree }} {{ edu.field ? 'in ' + edu.field : '' }}</h4>
+            <p class="text-gray-600">{{ edu.institution }}</p>
+            <p class="text-sm text-gray-500">{{ formatDateRange(edu.startDate, edu.endDate) }}</p>
+            <p class="text-sm text-gray-500" *ngIf="edu.gpa">GPA: {{ edu.gpa }}</p>
+            <p class="mt-2 text-gray-700" *ngIf="edu.description">{{ edu.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Skills</h3>
+        <div *ngIf="skills$ | async as skills">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div *ngFor="let category of getSkillCategory(skills) | keyvalue">
+              <h4 class="font-medium text-gray-900 mb-2">{{ category.key }}</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full" 
+                      *ngFor="let skill of category.value">
+                  {{ skill.name }}
+                  <span class="text-xs text-gray-500" *ngIf="skill.level">({{ skill.level }})</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications Section -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">Certifications</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" *ngIf="certifications$ | async as certifications">
+          <div class="bg-gray-50 rounded-lg p-4" *ngFor="let cert of certifications">
+            <h4 class="font-semibold text-gray-900">{{ cert.name }}</h4>
+            <p class="text-gray-600">{{ cert.issuer }}</p>
+            <p class="text-sm text-gray-500">{{ cert.date }}</p>
+            <p class="text-xs text-gray-400 mt-1" *ngIf="cert.credentialId">ID: {{ cert.credentialId }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Template -->
+    <ng-template #profileLoading>
+      <div class="animate-pulse">
+        <div class="bg-gray-50 rounded-lg p-6 mb-8">
+          <div class="flex items-center space-x-4">
+            <div class="h-16 w-16 bg-gray-300 rounded-full"></div>
+            <div class="space-y-2">
+              <div class="h-6 bg-gray-300 rounded w-48"></div>
+              <div class="h-4 bg-gray-300 rounded w-32"></div>
+              <div class="h-4 bg-gray-300 rounded w-24"></div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="h-4 bg-gray-300 rounded w-32"></div>
+          <div class="space-y-3">
+            <div class="h-20 bg-gray-300 rounded"></div>
+            <div class="h-20 bg-gray-300 rounded"></div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

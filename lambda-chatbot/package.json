@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-chatbot-lambda",
+  "version": "1.0.0",
+  "description": "AI chatbot Lambda function for Michael Copeland's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "zip -r chatbot-lambda.zip . -x \"*.git*\" \"node_modules/.cache/*\"",
+    "deploy": "aws lambda update-function-code --function-name portfolio-chatbot --zip-file fileb://chatbot-lambda.zip"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.864.0",
+    "@aws-sdk/lib-dynamodb": "^3.864.0"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "chatbot",
+    "openai",
+    "portfolio"
+  ],
+  "author": "Michael Copeland",
+  "license": "MIT"
+}

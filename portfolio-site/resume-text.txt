@@ -1,0 +1,164 @@
+
+
+ 
+ 
+Michael Copeland, CSM 
+3609 Canoe Birch Ct. 
+Fairfax, VA 22033 
+703.209.6693 
+michael@michaelcopeland.com 
+ 
+ 
+P R O F I L E 
+With my extensive background in software development, spanning the last 21 
+years, I have developed applications, full-stack, using languages from C# to Java 
+and JavaScript (Node.JS). I bring an eagerness to learn new technologies and to 
+apply new patterns to solve problems, always striving to stay atop the trends of 
+the ever-changing world of software development. I am seeking a position in 
+software development with the opportunity to continue my passions in learning 
+new technology stacks. 
+E X P E R I E N C E 
+Software Development Advisor, GDIT Inc., Chantilly, VA — 2003-Present 
+ 
+Refugee Arrivals Data System   
+Currently developer across multiple Spring MVC Applications. Responsible for 
+migration of URM, a data system for tracking unaccompanied minors’ access to 
+refugee benefits, to a separate Spring MVC application. Modernized UI across 
+screens to speed page load and standardize look and feel. Encapsulated 
+common design elements into a standalone Spring application to both serve as a 
+style guide as well as a library of components and services to be used across 
+applications. Developing a service locator mobile application using Flutter, to 
+allow location of refugee services via devices using iOS and Android. Built a 
+survey system for communication with refugees to gauge their success in 
+locating services upon entry to the US. Developed front end application using 
+Webpack and NodeJS to provide a fast-loading mobile responsive site for use on 
+phones. Configurations created to deploy application via S3 or self-contained 
+NodeJS server via AWS EC2 instances. Application interfaces with Spring Boot 
+API to serve user-customizable survey questions, storing data for future 
+reporting. Implementing notifications using Amazon Pinpoint to provide survey 
+notifications to users via email, SMS and WhatsApp.  
+ 
+Implemented JIRA workflows for development and communications teams. 
+Implemented scrum practices for a small development team which grew as the 
+contract progressed. Implemented daily standups. Conducted sprint plannings 
+with development teams. Introduced estimation and release planning concepts to 
+project management team and development team to ensure delivery of tasks on 
+time. Introduced concept of velocity to team to aid in planning of work. Managed 
+releases through automated tasks in JIRA as well as generation of release notes. 
+Generated daily status reports using Automated rules. Assisted development 
+
+ 
+ 
+team in creation of dashboards to facilitate best practices for development team. 
+Migrated existing hosted instance of JIRA to Atlassian along with Zephyr plugin 
+information.  
+ 
+VA File Conversion Services 
+Developed multiple Grails and AWS applications. Responsible for maintaining 
+modular system in charge of maintaining shipping logistics and file scanning for 
+the Department of Veteran Affairs. Developed rich UIs using jQuery and CSS. 
+Provided real-time reporting using dashboards accessing AWS Lambda functions 
+reporting data from Dynamo DB and SQL Server. Developed API using Lambda 
+functions to record data from partners providing scanning data for Veteran 
+claims. Ensured UI maintains standards for accessibility and 508 using Deque 
+Axe.  
+ 
+Mailbox Zero 
+Developed automated processing routines using UI Path for a project to process 
+PDFs from email inboxes. Utilized Tesseract OCR engine to read data within a 
+reliable accuracy to aid in processing of Veteran records.   Developed multiple 
+robot processes to read different Veteran claim forms and versions for 
+processing. Worked to train algorithms in built in Tesseract engine to recognize 
+both system font and handwriting, within a reasonable degree of accuracy. 
+Developed Python scripts to create JSON from data read via OCR from PDF 
+forms for storage in DynamoDB calling APIs created in AWS Lambda functions. 
+Aided in orchestration process for multiple bot processes reading from AWS SNS 
+queues to kickoff PDF OCR scanning processes. 
+ 
+ 
+Vets.gov API 
+Served as Scrum Master across two Agile development teams. Performed sprint 
+ceremonies across two-week sprints for development and DevOps teams. 
+Calculated team capacity and managed tasking, ensuring deliverables were 
+completed as promised within sprint constraints. Oversaw migration of Sprint 
+applications to Spring Boot based microservices in an AWS hosted architecture, 
+utilizing Docker containers along with AWS provided services. Performed 
+additional development tasks as needed providing software architecture input. 
+Created POCs leveraging Lambda based applications, creating APIs using 
+Lambda, API Gateway and DynamoDB. Created scriptable APIs using AWS 
+CloudFormation templates to allow for local development as well as source 
+deployable APIs.    
+ 
+EVSS 
+Served as an application developer and technical lead across multiple projects, 
+from inception to maintenance. Currently serving as a Lead Front-End Developer 
+and System Architect for the EVSS project, eBenefits.va.gov. Responsible for 
+oversight and implementation of a site redesign, incorporating responsive design 
+using the Skeleton CSS framework and creation of a library of custom UI 
+
+ 
+ 
+components for use across multiple codebases comprising the eBenefits 
+application. Facilitates development across the front-end and back-end teams, 
+assisting in migration of the legacy application into an API backend with MVC 
+front end. Implemented a build system for a team of front-end developers using 
+Grunt, to provide Sass/Compass compilation, JavaScript minification and 
+concatenation, code listing using ESLint, and a front-end test suite for each 
+component using QUnit to eliminate regression bugs in the CI process. Provides 
+peer review for members of application development team as well as oversees 
+front end development across application teams. Responsible for 508 testing and 
+remediation using FireEyes and JAWS. Serves as System Architect on the 
+project Architecture Review Board. Responsible for researching and 
+recommending technologies to be implemented across the application. 
+Developed a user notification system to send push notifications to users in real 
+time of system queued events using Node.JS, Faye (pub/sub) and Angular.  
+Grants.gov 
+Previously developed grants.gov, a Grails application to support grants 
+management across multiple clients. Developed business workflow system 
+(BPM) for defining activities and events across the grants management lifecycle. 
+Used XML to define customizable workflows. Developed application to process 
+medical research grant applications via web-based UI. Provided PDF export 
+capability using Apache POI and iText libraries. Troubleshot issues with Tomcat 
+servers using JMeter to simulate application load and provide benchmarks for 
+response times. Used JVM debugging tools to analyze and troubleshoot 
+application slow response times. Created SQL Server reports to provide analytics 
+to business. Utilized stored procedures and views to provide customizable 
+reports engine. Developed customizable reporting UI front end using JQuery. 
+ 
+EPA/National Response Team 
+Rearchitected a web-based application to migrate existing Lotus Notes based 
+application. Created and maintained customizable online catalog using a Flex 
+based application. Assisted in migration of application into a LAMP based AWS 
+hosted stack. Created deployable EC2 images on AWS to facilitate migration and 
+failover.  
+ 
+AN E C D O T AL F R E E L AN C E E X P E R I E N C E 
+Developed bot process, using UIVision RPA to create an automated process to 
+login to a tee time registration application at a local golf course. Allowed for quick 
+customization on the fly to change intended month day and time range to look for 
+available tee times for varying sizes of playing groups at various time ranges. 
+
+ 
+ 
+Successfully ran processes, scheduling times, including processing payment via 
+credit card to reserve tee times over the summer of 2020. 
+ 
+C E R T I F I C AT I O N S 
+Certified Scrum Master (CSM) – Scrum Alliance March 2017 
+E D U C AT I O N 
+B.S. (Computer Science), University of Maryland, College Park, 2003 
+S K I L L S 
+Programming Languages: Groovy, C#.net, C++, Java, Python, Web Services 
+(REST/SOAP), XML, XSLT,  JavaScript, ActionScript/Flash/Flex, HTML, CSS, 
+PHP, T-SQL, PL/SQL, MySQL 
+Frameworks and Libraries: Grails, Spring MVC, Spring Boot/jHipster, Fusebox, 
+jQuery, jQueryUI, YUI, Bootstrap, Skeleton, Node.JS/Express, Faye (pub/sub), 
+Firebase, Meteor 
+Automation/RPA Tools: UI Path, UIVision RPA 
+CI: Jenkins/Hudson, Grunt, NPM, ESLint/JSLint, SassLint, QUnit 
+Search Appliances: Verity K2, Google Search Appliance, Solr 
+Application Servers: Apache HTTP Server, IIS, Tomcat, Oracle Weblogic 
+Applications/IDEs: IntelliJ Eclipse, Vim, Adobe Creative Suite, GIMP, Microsoft 
+SQL Server 2008/T-SQL, MySQL, Oracle 11g, PL/SQL Developer, Ant, Maven, 
+Git, SVN 
+Screen Readers: JAWS, IBM Home Page Reader, Deque Axe 

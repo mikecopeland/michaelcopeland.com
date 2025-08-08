@@ -1,0 +1,143 @@
+<div class="bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100 min-h-screen py-12">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <div class="flex items-center justify-center mb-4">
+        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-3xl font-bold text-gray-900">AI Assistant</h1>
+          <p class="text-lg text-gray-600">Ask me about Michael's experience and projects</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      
+      <!-- Chat Header -->
+      <div class="bg-gradient-to-r from-green-500 to-green-600 px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">Michael's AI Assistant</h3>
+              <p class="text-green-100 text-sm">Online • Ready to help</p>
+            </div>
+          </div>
+          <button (click)="clearChat()" class="text-white hover:text-green-100 transition-colors duration-200">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Messages Container -->
+      <div class="h-96 overflow-y-auto p-6 space-y-4" #messagesContainer>
+        
+        <!-- Messages -->
+        <div *ngFor="let message of messages" class="space-y-4">
+          
+          <!-- User Message -->
+          <div *ngIf="message.message" class="flex justify-end">
+            <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg px-4 py-2 max-w-xs lg:max-w-md">
+              <p class="text-sm">{{ message.message }}</p>
+              <p class="text-xs text-blue-100 mt-1">{{ message.timestamp | date:'shortTime' }}</p>
+            </div>
+          </div>
+
+          <!-- AI Response -->
+          <div *ngIf="message.response" class="flex justify-start">
+            <div class="bg-gray-100 rounded-lg px-4 py-2 max-w-xs lg:max-w-md">
+              <p class="text-sm text-gray-800">{{ message.response }}</p>
+              <p class="text-xs text-gray-500 mt-1">{{ message.timestamp | date:'shortTime' }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div *ngIf="isLoading" class="flex justify-start">
+          <div class="bg-gray-100 rounded-lg px-4 py-2">
+            <div class="flex items-center space-x-2">
+              <div class="flex space-x-1">
+                <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+              </div>
+              <span class="text-xs text-gray-500">AI is typing...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="border-t border-gray-200 p-4">
+        <div class="flex items-center space-x-3">
+          <div class="flex-1">
+            <textarea
+              [(ngModel)]="newMessage"
+              (keypress)="onKeyPress($event)"
+              placeholder="Ask me about Michael's experience, skills, or projects..."
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+              rows="2"
+            ></textarea>
+          </div>
+          <button
+            (click)="sendMessage()"
+            [disabled]="!newMessage.trim() || isLoading"
+            class="px-6 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Section -->
+    <div class="mt-8 bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Suggested Questions</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <button 
+          (click)="newMessage = 'What is Michael\'s experience?'; sendMessage()"
+          class="text-left p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+        >
+          <p class="font-medium text-gray-900">What is Michael's experience?</p>
+          <p class="text-sm text-gray-600">Learn about his 21+ years in software development</p>
+        </button>
+        <button 
+          (click)="newMessage = 'What are Michael\'s key projects?'; sendMessage()"
+          class="text-left p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+        >
+          <p class="font-medium text-gray-900">What are Michael's key projects?</p>
+          <p class="text-sm text-gray-600">Discover his major software projects</p>
+        </button>
+        <button 
+          (click)="newMessage = 'What technologies does Michael use?'; sendMessage()"
+          class="text-left p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+        >
+          <p class="font-medium text-gray-900">What technologies does Michael use?</p>
+          <p class="text-sm text-gray-600">Explore his technical skills and tools</p>
+        </button>
+        <button 
+          (click)="newMessage = 'Tell me about Michael\'s education and certifications'; sendMessage()"
+          class="text-left p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+        >
+          <p class="font-medium text-gray-900">Education & Certifications</p>
+          <p class="text-sm text-gray-600">Learn about his academic background</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
