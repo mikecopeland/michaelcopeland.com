@@ -71,3 +71,5 @@ echo "3. Set up CI/CD for automatic deployments"
 echo ""
 echo "🔗 S3 Console: https://console.aws.amazon.com/s3/buckets/$BUCKET_NAME"
 
+
+

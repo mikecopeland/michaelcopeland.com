@@ -110,3 +110,5 @@ For each skill, note:
 
 Would you like me to help you with any specific section or create a more detailed template for your particular resume format?
 
+
+

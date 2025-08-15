@@ -1,9 +1,6 @@
 <div class="bg-white py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Debug Info -->
-    <div class="mt-4 p-4 bg-yellow-100 rounded-lg" *ngIf="profile$ | async as profile">
-      <p class="text-sm text-yellow-800">Debug: Profile loaded - {{ profile.name }}</p>
-    </div>
+    
 
     <!-- Profile Section -->
     <div class="mt-12" *ngIf="profile$ | async as profile; else profileLoading">

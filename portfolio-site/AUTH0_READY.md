@@ -156,3 +156,5 @@ Your Auth0 integration is complete and ready for configuration. Once you:
 
 Your portfolio will have a fully functional authentication system with a protected AI chatbot! 🏖️
 
+
+

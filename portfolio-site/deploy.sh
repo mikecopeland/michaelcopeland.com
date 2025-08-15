@@ -104,3 +104,5 @@ echo "4. Set up CI/CD for automatic deployments"
 echo ""
 echo "💡 To update your site in the future, just run: ./deploy.sh"
 
+
+

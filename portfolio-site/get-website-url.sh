@@ -27,3 +27,5 @@ echo ""
 echo "💡 To update your site in the future, run:"
 echo "   ng build --configuration production && aws s3 sync dist/portfolio-site s3://$BUCKET_NAME --delete"
 
+
+
