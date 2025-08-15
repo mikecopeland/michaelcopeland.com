@@ -10,10 +10,6 @@
       </p>
     </div>
 
-    <!-- Debug Info -->
-    <div class="mt-4 p-4 bg-blue-100 rounded-lg" *ngIf="projects$ | async as projects">
-      <p class="text-sm text-blue-800">Debug: {{ projects.length }} GitHub projects loaded</p>
-    </div>
 
     <!-- Projects Grid -->
     <div class="mt-12" *ngIf="projects$ | async as projects; else projectsLoading">
