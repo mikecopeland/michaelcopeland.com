@@ -6,6 +6,10 @@ import { provideAuth0 } from '@auth0/auth0-angular';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { provideClientHydration } from '@angular/platform-browser';
+import { importProvidersFrom } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginTrackingService } from './services/login-tracking.service';
 
 import { routes } from './app.routes';
 
@@ -32,5 +36,7 @@ export const appConfig: ApplicationConfig = {
       maxAge: 25,
       logOnly: environment.production,
     }),
+    importProvidersFrom(ReactiveFormsModule),
+    LoginTrackingService,
   ]
 };

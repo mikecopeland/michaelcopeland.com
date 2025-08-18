@@ -1,0 +1,15 @@
+{
+  "name": "contact-form-sns-lambda",
+  "version": "1.0.0",
+  "description": "Lambda function to handle contact form submissions and send SNS notifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sns": "^3.0.0"
+  },
+  "keywords": ["aws", "lambda", "sns", "contact-form"],
+  "author": "Michael Copeland",
+  "license": "MIT"
+}

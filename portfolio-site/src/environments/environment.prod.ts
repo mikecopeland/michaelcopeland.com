@@ -7,5 +7,6 @@ export const environment = {
     audience: undefined
   },
   apiUrl: 'https://api.michaelcopeland.com',
-  chatbotApiUrl: 'https://xcor92u7pj.execute-api.us-east-1.amazonaws.com/prod/chat' // Lambda API Gateway
+  chatbotApiUrl: 'https://xcor92u7pj.execute-api.us-east-1.amazonaws.com/prod/chat', // Lambda API Gateway
+  contactApiUrl: 'https://ou1va4kfa5.execute-api.us-east-1.amazonaws.com/contact' // Contact form API Gateway
 };

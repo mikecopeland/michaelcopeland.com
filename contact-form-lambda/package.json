@@ -1,0 +1,24 @@
+{
+  "name": "contact-form-lambda",
+  "version": "1.0.0",
+  "description": "Lambda function for handling contact form submissions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/client-ses": "^3.0.0",
+    "@aws-sdk/lib-dynamodb": "^3.0.0",
+    "aws-sdk": "^2.1692.0"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "ses",
+    "dynamodb",
+    "contact-form"
+  ],
+  "author": "Michael Copeland",
+  "license": "MIT"
+}

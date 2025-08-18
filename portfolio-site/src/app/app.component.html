@@ -1,5 +1,16 @@
 <app-header></app-header>
+
+<!-- Loading indicator -->
+<div 
+  *ngIf="isLoading" 
+  [@loadingAnimation]="isLoading ? 'loading' : 'loaded'"
+  class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500 z-50 shadow-lg">
+  <div class="h-full bg-white opacity-20 animate-pulse"></div>
+</div>
+
 <main class="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100">
-  <router-outlet />
+  <div class="route-container" [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet" />
+  </div>
 </main>
 <app-footer></app-footer>

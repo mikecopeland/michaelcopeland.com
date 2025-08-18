@@ -7,5 +7,6 @@ export const environment = {
     audience: undefined
   },
   apiUrl: 'http://localhost:4200',
-  chatbotApiUrl: 'http://localhost:4200/api/chat' // Local development
+  chatbotApiUrl: 'http://localhost:4200/api/chat', // Local development
+  contactApiUrl: 'https://ou1va4kfa5.execute-api.us-east-1.amazonaws.com/contact' // Contact form API Gateway
 };
